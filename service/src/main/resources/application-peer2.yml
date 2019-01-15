@@ -1,0 +1,6 @@
+server:
+  port: 6002
+eureka:
+  client:
+    service-url:
+      defaultZone: http://server2:5556/eureka/

@@ -2,5 +2,7 @@
 *.iml
 .mvn/*
 *.cmd
-mvnw
+.mvnw/
 target/*
+mvnw
+.mvn/

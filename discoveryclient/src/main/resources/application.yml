@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: discovery_client
+server:
+  port: 6000
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://server1:5555/eureka/
