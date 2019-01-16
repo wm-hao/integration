@@ -1,0 +1,29 @@
+server:
+  port: 9001
+spring:
+  cloud:
+    config:
+      server:
+        default-application-name: config_server
+        git:
+          uri: https://github.com/wm-hao/spring-cloud-config
+          search-paths: repos
+      label: master
+  application:
+    name: config_server
+
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://server1:5555/eureka/,http://server2:5556/eureka/
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+#  localhost:9001/actuator/bus-refresh
