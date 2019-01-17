@@ -1,18 +1,15 @@
-package shark.feign;
+package shark.zookeepker;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication(scanBasePackages = "shark")
-@EnableFeignClients(basePackages = "shark")
 @EnableDiscoveryClient
-public class FeignApplication {
+public class ZookeepkerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(FeignApplication.class, args);
+        SpringApplication.run(ZookeepkerApplication.class, args);
     }
 
 }

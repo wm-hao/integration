@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: zookeeper-discovery-server
+
+  cloud:
+    zookeeper:
+#      connect-string: 127.0.0.1:2181,127.0.0.1:2182,127.0.0.1:2183
+      discovery:
+        enabled: true
+        register: true
+      connect-string: localhost:2181
+server:
+  port: 11000
+

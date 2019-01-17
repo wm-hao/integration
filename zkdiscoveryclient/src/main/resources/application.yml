@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: zookeeper-discovery-client
+  cloud:
+    zookeeper:
+      connect-string: 127.0.0.1:2181,127.0.0.1:2182,127.0.0.1:2183
+      discovery:
+        enabled: true
+        register: false
+server:
+  port: 11001
+
+#ribbon:
+#  eager-load:
+#    enabled: true
+#    clients: zookeeper-discovery-server

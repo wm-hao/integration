@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 /**
  * @author zhuhh 2019/1/16
  */
-@FeignClient("service")
+@FeignClient(name = "service", fallback = UserClientFallbackImpl.class)
 public interface UserClient {
 
     @GetMapping("/service")
