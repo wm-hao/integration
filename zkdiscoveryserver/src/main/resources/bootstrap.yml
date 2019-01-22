@@ -1,6 +1,6 @@
 spring:
   application:
-    name: zookeeper-discovery-server
+    name: service-zookeeper
 
   cloud:
     zookeeper:

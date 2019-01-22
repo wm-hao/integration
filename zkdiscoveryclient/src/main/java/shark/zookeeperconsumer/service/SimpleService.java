@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 /**
  * @author zhuhh 2019/1/17
  */
-@FeignClient("zookeeper-discovery-server")
+@FeignClient("service-zookeeper")
 public interface SimpleService {
 
     @GetMapping("/getRandom")

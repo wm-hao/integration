@@ -3,3 +3,5 @@ spring:
     name: service
   profiles:
     active: peer1
+  zipkin:
+    base-url: http://localhost:9411
