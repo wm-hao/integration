@@ -1,0 +1,6 @@
+<mapper namespace="shark.mybatis.mapper.companyMapper">
+    <resultMap type="shark.mybatis.pojo.Company" id="company">
+        <id property="id" cloumn="id"/>
+        <result property="companyName" cloumn="name"/>
+    </resultMap>
+</mapper>
