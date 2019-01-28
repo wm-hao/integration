@@ -1,5 +1,6 @@
 package shark.security.config;
 
+import org.springframework.boot.autoconfigure.security.servlet.PathRequest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -33,15 +34,17 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
+                .requestMatchers(PathRequest.toStaticResources().atCommonLocations()).permitAll()
+//                .antMatchers("/**/*.css").permitAll()
                 .anyRequest().authenticated()
                 .and().formLogin().loginPage("/login").failureUrl("/login?error").successForwardUrl("/").permitAll()
                 .and().logout().permitAll();
     }
 
-    @Override
-    public void configure(WebSecurity web) throws Exception {
-        //解决静态资源被拦截的问题
-        web.ignoring().antMatchers("/**/*.js", "/lang/*.json", "/static/css/*.css", "/**/*.js", "/**/*.map", "/**/*.html",
-                "/**/*.png");
-    }
+//    @Override
+//    public void configure(WebSecurity web) throws Exception {
+//        //解决静态资源被拦截的问题
+//        web.ignoring().antMatchers("/**/*.js", "/lang/*.json", "/static/css/*.css", "/**/*.js", "/**/*.map", "/**/*.html",
+//                "/**/*.png");
+//    }
 }
