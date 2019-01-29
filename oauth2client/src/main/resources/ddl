@@ -1,0 +1,27 @@
+drop table if exists test.oauth2_client;
+create table test.oauth2_client (
+  id int auto_increment primary key,
+  clientId varchar(50),
+  clientSecret varchar(50),
+  redirectUrl varchar(2000),
+  grantType varchar(100),
+  scope varchar(100)
+);
+
+insert into test.oauth2_client(clientId, clientSecret, redirectUrl, grantType, scope)
+values ('clientId','clientSecret','http://www.baidu.com,http://www.csdn.net', 'authorization_code,client_credentials,password,implicit', 'scope1,scope2');
+
+
+drop table if exists test.oauth2_user;
+create table test.oauth2_user (
+  id int auto_increment primary key,
+  username varchar(50),
+  password varchar(50)
+);
+
+insert into test.oauth2_user (username, password)
+values ('admin','admin');
+
+insert into test.oauth2_user (username, password)
+values ('guest','guest');
+
