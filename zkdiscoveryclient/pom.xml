@@ -8,9 +8,9 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>zookeeperconsumer</artifactId>
+    <artifactId>zkdiscoveryclient</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>zookeeperconsumer</name>
+    <name>zkdiscoveryclient</name>
     <description>Zookeeper 服务发现客户端</description>
 
     <properties>
